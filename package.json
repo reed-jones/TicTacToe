@@ -1,12 +1,12 @@
 {
   "name": "tictactoe_server",
   "version": "1.0.0",
-  "description": "websocket live tictactoe game",
+  "description": "multiplayer",
   "main": "index.js",
   "author": "Reed Jones",
   "license": "MIT",
   "scripts": {
-    "serve": "nodemon server/app.js",
+    "serve": "nodemon server/app.js --exec babel-node",
     "dev": "parcel watch client/index.html --public-url /",
     "build": "parcel build client/index.html --public-url /"
   },
@@ -14,10 +14,14 @@
     "dotenv": "^5.0.1",
     "express": "^4.16.2",
     "nodemon": "^1.17.1",
-    "vue": "^2.5.15"
+    "uuid": "^3.2.1",
+    "vue": "^2.5.15",
+    "ws": "^5.0.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-2": "^6.24.1",
     "parcel-bundler": "^1.6.2",
     "parcel-plugin-vue": "^1.5.0",
     "pug": "^2.0.1",

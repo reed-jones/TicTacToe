@@ -1,6 +1,5 @@
 import uuidv1 from 'uuid/v1'
 import { GamesRoom, Lobby } from './'
-// import { send } from './utilities'
 
 class Game {
   constructor(player) {
@@ -69,13 +68,11 @@ class Game {
     let result = ''
     try {
       result = JSON.parse(message)
-      // console.log(result)
 
       if (result && result.status) {
         switch (result.status) {
           case 'player-move':
             if (result.row >= 0 && result.column >= 0) {
-              // console.log('move')
               this.makeMove(result.row, result.column)
               this.nextTurn()
               this.notify()

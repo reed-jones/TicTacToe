@@ -8,15 +8,18 @@
   "scripts": {
     "serve": "nodemon server/app.js --exec babel-node",
     "dev": "parcel watch client/index.html --public-url /",
-    "build": "parcel build client/index.html --public-url /"
+    "build": "parcel build client/index.html --public-url /",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "dotenv": "^5.0.1",
     "express": "^4.16.2",
     "nodemon": "^1.17.1",
     "uuid": "^3.2.1",
-    "vue": "^2.5.15",
-    "ws": "^5.0.0"
+    "vue": "^2.5.17",
+    "ws": "^5.0.0",
+    "snyk": "^1.103.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -26,5 +29,6 @@
     "parcel-plugin-vue": "^1.5.0",
     "pug": "^2.0.1",
     "stylus": "^0.54.5"
-  }
+  },
+  "snyk": true
 }

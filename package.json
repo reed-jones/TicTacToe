@@ -9,8 +9,8 @@
     "serve": "nodemon server/app.js --exec babel-node",
     "dev": "parcel watch client/index.html --public-url /",
     "build": "parcel build client/index.html --public-url /",
-    "snyk-protect": "snyk protect",
-    "prepare": "npm run snyk-protect"
+    "snyk-protect": "snyk-protect",
+    "prepare": "yarn run snyk-protect"
   },
   "dependencies": {
     "dotenv": "^5.0.1",
@@ -19,7 +19,7 @@
     "uuid": "^3.2.1",
     "vue": "^2.5.17",
     "ws": "^5.0.0",
-    "snyk": "^1.103.1"
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
